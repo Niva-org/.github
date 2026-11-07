@@ -1,0 +1,48 @@
+name: Propuesta
+description: Una funcionalidad o mejora que no está en la especificación vigente
+title: "[propuesta] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Si la propuesta contradice `docs/decisions/adr-v4.md`, primero hace falta un ADR nuevo. Si ya está en `docs/spec/`, esto es un error de implementación: usa la plantilla de error.
+  - type: dropdown
+    id: repo
+    attributes:
+      label: Repositorio
+      options:
+        - platform
+        - windows-connector
+        - .github
+    validations:
+      required: true
+  - type: textarea
+    id: problema
+    attributes:
+      label: Problema del usuario
+      description: Qué no puede hacer hoy el dueño del restaurante o el operador.
+    validations:
+      required: true
+  - type: textarea
+    id: propuesta
+    attributes:
+      label: Propuesta
+    validations:
+      required: true
+  - type: textarea
+    id: alternativas
+    attributes:
+      label: Alternativas consideradas
+  - type: input
+    id: fase
+    attributes:
+      label: Fase en la que encajaría
+  - type: checkboxes
+    id: alcance
+    attributes:
+      label: Alcance
+      options:
+        - label: Requiere un ADR nuevo
+        - label: Cambia `docs/spec/`
+        - label: Solo afecta este repositorio

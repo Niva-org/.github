@@ -1,0 +1,35 @@
+name: Pregunta abierta
+description: Duda que bloquea o condiciona el trabajo y todavía no tiene respuesta
+title: "[pregunta] "
+labels: ["open-question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Toda pregunta abierta que bloquee trabajo debe quedar también en `platform/docs/decisions/open-questions.md`, con la fecha y a quién se le preguntó.
+  - type: textarea
+    id: pregunta
+    attributes:
+      label: Pregunta
+    validations:
+      required: true
+  - type: textarea
+    id: bloquea
+    attributes:
+      label: Qué bloquea
+      description: Fase, repositorio y trabajo concreto.
+    validations:
+      required: true
+  - type: textarea
+    id: opciones
+    attributes:
+      label: Opciones y su costo
+  - type: input
+    id: responsable
+    attributes:
+      label: Quién puede responder
+  - type: textarea
+    id: provisional
+    attributes:
+      label: Supuesto provisional
+      description: Qué se está haciendo mientras llega la respuesta, y cómo se marca (contrato, mock, prueba, puerta bloqueada).

@@ -1,0 +1,52 @@
+name: Cambio de especificación
+description: Corregir, aclarar o ampliar la especificación de `platform/docs/spec/`
+title: "[spec] "
+labels: ["spec"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        La especificación vive en `Niva-org/platform/docs/spec/`. Un cambio de decisión cerrada exige un ADR nuevo en `docs/decisions/`; no se edita el ADR vigente.
+  - type: input
+    id: documento
+    attributes:
+      label: Documento y sección
+      placeholder: "docs/spec/07-analitica-e-ia.md §4"
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Qué dice hoy
+      description: Cita el texto exacto.
+    validations:
+      required: true
+  - type: textarea
+    id: propuesto
+    attributes:
+      label: Qué debería decir
+    validations:
+      required: true
+  - type: textarea
+    id: motivo
+    attributes:
+      label: Por qué
+      description: Qué se aprendió, qué se rompió o qué dato nuevo apareció.
+    validations:
+      required: true
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Tipo de cambio
+      options:
+        - Corrección (el texto no correspondía a la realidad)
+        - Aclaración (sin cambiar la decisión)
+        - Decisión nueva (requiere ADR)
+    validations:
+      required: true
+  - type: checkboxes
+    id: adr
+    attributes:
+      label: Si es decisión nueva
+      options:
+        - label: Adjunto el ADR propuesto y espero aprobación antes de tocar código

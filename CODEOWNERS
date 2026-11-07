@@ -1,0 +1,7 @@
+# Dueños por defecto
+
+Aplica a todos los repositorios de la organización que no definan su propio `CODEOWNERS`.
+
+```
+* @edy2310
+```

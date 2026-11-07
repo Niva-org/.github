@@ -1,0 +1,57 @@
+name: Error
+description: Algo no funciona como dice la especificación
+title: "[error] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        No incluyas datos reales de clientes, credenciales ni capturas con información personal. Usa los fixtures sintéticos.
+  - type: dropdown
+    id: repo
+    attributes:
+      label: Repositorio
+      options:
+        - platform
+        - windows-connector
+        - .github
+    validations:
+      required: true
+  - type: input
+    id: fase
+    attributes:
+      label: Fase
+      placeholder: "0"
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: Qué esperabas
+    validations:
+      required: true
+  - type: textarea
+    id: real
+    attributes:
+      label: Qué pasó
+      description: Incluye el mensaje exacto que viste.
+    validations:
+      required: true
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Cómo reproducirlo
+      placeholder: |
+        1. …
+        2. …
+    validations:
+      required: true
+  - type: input
+    id: commit
+    attributes:
+      label: Commit o versión
+  - type: textarea
+    id: evidencia
+    attributes:
+      label: Logs o salida
+      description: Pega solo lo necesario; elimina datos personales.

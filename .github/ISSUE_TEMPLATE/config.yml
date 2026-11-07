@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Vulnerabilidad de seguridad
+    url: https://github.com/Niva-org/.github/blob/main/SECURITY.md
+    about: No abras un issue público; sigue la política de seguridad.
+  - name: Especificación
+    url: https://github.com/Niva-org/platform/tree/main/docs/spec
+    about: Antes de abrir un issue, revisa la especificación vigente.
